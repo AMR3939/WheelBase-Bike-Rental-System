@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #434343);
+            color: white;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 0;
+            background-color: #1c1c1c;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .container h2 {
+            margin: 20px 0;
+            font-size: 28px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .bike-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .bike-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bike-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        form {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        button {
+            background: linear-gradient(90deg, #444444, #888888);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #888888, #444444);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bikes</h1>
+    </header>
+    <div class="container">
+        <h2>Discover Our Range of Bikes</h2>
+        <form action="fetchbikes.jsp" method="post">
+            <button type="submit" name="submit" value="fetchbikes">Click to see available bikes</button>
+        </form>
+        <div class="bike-gallery">
+            <img src="bikes/bike1.jpeg" alt="Bike 1">
+            <img src="bikes/bike2.jpg" alt="Bike 2">
+            <img src="bikes/bike3.jpg" alt="Bike 3">
+            <img src="bikes/bike4.avif" alt="Bike 4">
+            <img src="bikes/bike5.avif" alt="Bike 5">
+            <img src="bikes/bike6.avif" alt="Bike 6">
+            <img src="bikes/bike7.jpg" alt="Bike 7">
+            <img src="bikes/bike8.jpg" alt="Bike 8">
+            <img src="bikes/bike9.jpg" alt="Bike 9">
+            <img src="bikes/bike10.jpg" alt="Bike 10">
+            <img src="bikes/bike11.jpg" alt="Bike 11">
+            <img src="bikes/bike12.jpg" alt="Bike 12">
+            <img src="bikes/bike13.jpg" alt="Bike 13">
+            <img src="bikes/bike14.jpg" alt="Bike 14">
+            <img src="bikes/bike15.jpg" alt="Bike 15">
+            <img src="bikes/bike16.jpg" alt="Bike 16">
+            <img src="bikes/bike17.jpg" alt="Bike 17">
+            <img src="bikes/bike18.jpg" alt="Bike 18">
+            <img src="bikes/bike19.jpg" alt="Bike 19">
+            <img src="bikes/bike20.jpg" alt="Bike 20">
+        </div>
+    </div>
+</body>
+</html>

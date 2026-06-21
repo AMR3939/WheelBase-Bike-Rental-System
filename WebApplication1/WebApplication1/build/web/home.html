@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Bike Enthusiasts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            background-image: url('bikes/bike2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #222;
+            color: #fff;
+            transition: background-color 0.5s ease;
+            overflow: hidden;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: fadeInDown 1s;
+            position: relative;
+            z-index: 1;
+        }
+        
+        a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        a::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        a:hover::before {
+            transform: scaleX(1);
+        }
+        
+        h1, h2 {
+            color: #fff;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1s, neon 1.5s infinite alternate;
+            position: relative;
+            z-index: 1;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeInUp 1s;
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+        
+        /* Background animation */
+        .bg-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .bg-animation::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: bgAnimation 10s infinite linear;
+        }
+        
+        @keyframes bgAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <nav id="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+           
+        </div>
+        <div>
+            <a href="login.html" onclick="displayMessage('Login page!')">Login</a>
+            <a href="roleselection.html" onclick="displayMessage('Sign Up page!')">Sign Up</a>
+        </div>
+    </nav>
+    <h1>Welcome to WheelBase/h1>
+    <p>Your ultimate destination for everything related to bikes. Whether you're a professional rider or just starting out, we have something for everyone. Explore our latest articles, check out our bike reviews, and join our community to connect with fellow bike lovers.</p>
+    <div id="message" style="background:transparent;"></div>
+    
+    <script>
+        function displayMessage(message) {
+            document.getElementById('message').innerText = message;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - Bike Rental</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            background-color: #222;
+        }
+        
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url(bikes/bike2.jpg);
+            background-size: cover;
+            background-position: center;
+            animation: bgZoom 30s infinite;
+            filter: brightness(0.7) blur(2px);
+        }
+        
+        @keyframes bgZoom {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            animation: fadeInDown 1s;
+            position: relative;
+            z-index: 1;
+        }
+        
+        a {
+            display: inline-block;
+            margin-right: 20px;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        a::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+        
+        a:hover::before {
+            width: 100%;
+        }
+        
+        h1, h2 {
+            color: #fff;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1s, neon 1.5s infinite alternate;
+            position: relative;
+            z-index: 1;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        p {
+            margin: 20px auto;
+            max-width: 800px;
+            font-size: 20px;
+            color: #fff;
+            background-color: rgb(83 79 79 / 70%);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeInUp 1s;
+            position: relative;
+            z-index: 1;
+            text-align: left;
+        }
+        
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <nav id="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            
+            
+        </div>
+        <div>
+            <a href="login.html" onclick="displayMessage('Login page!')">Login</a>
+            
+        </div>
+    </nav>
+    <h1>About Us</h1>
+    <p>Welcome to Bike Rental! We are a premier bike rental service dedicated to providing cyclists of all levels with high-quality bikes and exceptional customer service. Our mission is to make cycling accessible and enjoyable for everyone, whether you're a casual rider or a seasoned enthusiast.</p>
+    <p>Founded in 2018, Bike Rental has quickly become a trusted name in the cycling community. We offer a wide range of well-maintained bikes, including sleek road bikes, rugged mountain bikes, and comfortable city bikes. Each bike is carefully inspected and serviced to ensure a safe and enjoyable ride.</p>
+    <p>Our commitment to excellence extends beyond our bikes. We pride ourselves on our customer service, ensuring that every rider has the information and support they need to make the most of their cycling experience. Our knowledgeable staff is always ready to assist with bike selection, maintenance tips, and route planning.</p>
+    <p>At Bike Rental, we believe in the power of cycling to bring people together and promote a healthy, active lifestyle. We regularly organize community rides, cycling workshops, and events to foster a sense of camaraderie among our riders. Whether you're looking to explore new trails, improve your cycling skills, or simply enjoy a leisurely ride, we have something for everyone.</p>
+    <p>Join us today and discover the joy of cycling with Bike Rental. Visit our rental page to reserve your bike and embark on an exciting adventure. Together, let's make every ride an unforgettable experience.</p>
+    <div id="message" style="background:transparent;"></div>
+    
+    <script>
+        function displayMessage(message) {
+            document.getElementById('message').innerText = message;
+        }
+    </script>
+</body>
+</html>
